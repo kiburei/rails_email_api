@@ -6,4 +6,9 @@ class BillingCashOfficeMailer < ApplicationMailer
     mail(to: bill_data[:to_email], subject: bill_data[:subject])
   end
 
+  def ncg_receipt(receipt_data)
+    @receipt = receipt_data
+    mail(to: receipt_data[:to_email], subject: receipt_data[:subject])
+  end
+
 end

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Nairobi County Government</h1>
+    <h2>Receipt <%= @receipt[:receipt_number] %></h2>
+    <p>
+      Dear <%= @receipt[:customer_name] %> your bill has been succesfully paid'
+    </p>
+    <table>
+        <thead>
+          <th>Receipt Number</th>
+          <th>Receipt Bill</th>
+          <th>Receipt For</th>
+          <th>Receipt Amount</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @receipt[:receipt_number] %></td>
+            <td><%= @receipt[:receipt_bill] %></td>
+            <td><%= @receipt[:receipt_for] %></td>
+            <td><%= @receipt[:receipt_amount] %></td>
+          </tr>
+        </tbody>
+    </table>
+  <p>Thanks for working with us</p>
+  </body>
+</html>
