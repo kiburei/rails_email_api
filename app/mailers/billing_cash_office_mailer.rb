@@ -1,9 +1,9 @@
 class BillingCashOfficeMailer < ApplicationMailer
   default from: "akiburei@gmail.com"
 
-  def ncg_bill
-    @customer = "Andrew Mwangi Wachira"
-    mail(to: "mwangi@nouveta.tech", subject: "Nairobi County Government Bill")
+  def ncg_bill(bill_data)
+    @bill = bill_data
+    mail(to: bill_data[:to_email], subject: bill_data[:subject])
   end
 
 end

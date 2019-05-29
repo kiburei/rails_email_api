@@ -5,11 +5,26 @@
   </head>
   <body>
     <h1>Nairobi County Government</h1>
+    <h2>Bill <%= @bill[:bill_number] %></h2>
     <p>
-      Your bill has been succesfully created
+      Dear <%= @bill[:customer_name] %> your bill has been succesfully created'
     </p>
-    <p>
-    </p>
-    <p>Thanks for working with us</p>
+    <table>
+        <thead>
+          <th>Bill Number</th>
+          <th>Bill Description</th>
+          <th>Bill Detail</th>
+          <th>Bill Amount</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @bill[:bill_number] %></td>
+            <td><%= @bill[:bill_account] %></td>
+            <td><%= @bill[:bill_description] %></td>
+            <td><%= @bill[:bill_amount] %></td>
+          </tr>
+        </tbody>
+    </table>
+  <p>Thanks for working with us</p>
   </body>
 </html>
